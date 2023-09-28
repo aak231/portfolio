@@ -7,8 +7,7 @@ import ArabUnityLogo from "@/public/ArabUnityLogo.png";
 import happyRoutesPic from "@/public/happyRoutes.png";
 import weatherWidgetPic from "@/public/weatherWidget.png";
 
-
-export const links = [
+export const sections = [
   {
     name: "Home",
     hash: "#home",
@@ -84,14 +83,14 @@ export const projectsData = [
     description:
       "My final year project at AUS as an undergraduate. Aimed for tourists, the app aims to deliver a 'happy route' based on the user's metric which they describe when they register. Metrics range from heritage, nature and urban views (skyscrapers etc).",
     role: "Part of the routing algorithm team and API integration",
-      tags: ["Swift", "Python", "cosmoDB", "Data Cleaning", "Geolocation"],
+      tags: ["Swift","Python","Numpy", "Pandas" ,"cosmoDB", "Geolocation"],
     imageUrl: happyRoutesPic,
   },
   {
     title: "Weather Widget",
     description:
       "Created a weather widget which takes in a user location and sends relevant weather data such as temperature, humidity and the type of day (cloudy, clear etc).",
-    tags: ["React", "HTML" , "CSS" ,"WeatherAPI", "ContextAPI", "Geocoding"],
+    tags: ["React", "HTML" , "CSS", "ContextAPI", "Geocoding"],
     imageUrl: weatherWidgetPic,
   },
 ] as const;
@@ -123,6 +122,9 @@ export const skillsData = [
   "CSS",
   "JavaScript",
   "TypeScript",
+  "AWS Elastic Beanstalk",
+  "AWS EC2",
+  "AWS RDS",
   "React",
   "Next.js",
   "Node.js",
@@ -134,6 +136,8 @@ export const skillsData = [
   "NoSQL",
   "MySQL",
   "Python",
+  "Numpy",
+  "Pandas",
   "Django",
   "Framer Motion",
 ] as const;
