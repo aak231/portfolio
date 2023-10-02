@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${inter.className}˝
-      bg-green-50 text-green-950 relative h-[5000px]`}
+      bg-green-50 text-green-950 relative h-[5000px] pt-28 sm:pt-36`}
       >
         <div
           className="bg-[#a6ccbf] absolute top-[-6rem] -z-10 right-[1rem] 
