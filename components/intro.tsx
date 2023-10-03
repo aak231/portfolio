@@ -5,11 +5,11 @@ import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { BsArrowRight, BsGithub, BsLinkedin } from "react-icons/bs";
-import { HiDownload } from "react-icons/hi"
+import { HiDownload } from "react-icons/hi";
 
 const Intro = () => {
   return (
-    <section className="mb-28 max-2-[50rem] text-center sm:mb-0">
+    <section className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]">
       <div className="flex items-center justify-center">
         <div className="relative">
           <motion.div
@@ -48,22 +48,32 @@ const Intro = () => {
           Software Development, Business Analytics or Product Management
         </span>
       </motion.p>
-      <div className="flex flex-col sm:flex-row items-center justify-center">
-        <Link href="#contact" className="bg-green-800 text-white px-7 py-3 flex items-center gap-2 rounded-full" >
-          Contact me here <BsArrowRight/> 
+      <motion.div
+        className="flex flex-col sm:flex-row items-center justify-center gap-3 px-4 text-lg font-medium"
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 0.1,
+        }}
+      >
+        <Link
+          href="#contact"
+          className="group bg-green-800 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-green-950 active:scale-105 transition"
+        >
+          Contact me here <BsArrowRight className="opacity-70 group-hover:translate-x-2 transition" />
         </Link>
-        <a className="bg-white text-black px-7 py-3 flex items-center gap-2 rounded-full">
-          Download CV <HiDownload/> 
+        <a className="group bg-white text-black px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor" href="/Abdul Ahad Khan-V7.pdf" download={true}>
+          Download CV <HiDownload className="opacity-60 group-hover:translate-y-1 transition"/>
         </a>
         <a className="bg-white text-gray-700 p-4 flex items-center gap-2 rounded-full">
-          <BsLinkedin/>
+          <BsLinkedin />
         </a>
         <a className="bg-white text-gray-700 p-4 flex items-center gap-2 rounded-full">
-          <BsGithub/>
+          <BsGithub />
         </a>
-      </div>
+      </motion.div>
     </section>
-  ); 
+  );
 };
 
 export default Intro;
