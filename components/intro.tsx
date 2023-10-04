@@ -33,7 +33,7 @@ const Intro = () => {
         </div>
       </div>
       <br></br>
-      <motion.p
+      <motion.h1
         className="mb-10 mt-4 px-4 text-2xl font-medium text-green-800 !leading-[1.5] sm:text-4xl"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
@@ -42,12 +42,13 @@ const Intro = () => {
         <span className="font-bold">Software Engineer</span> with{" "}
         <span className="font-bold">a year</span> of professional experience. I
         enjoy building
-        <span className="italic"> websites & apps</span>. I am currently looking
+        <span className="italic"> websites & apps</span>
+        {/* . I am currently looking
         for positions in{" "}
         <span className="italic underline">
           Software Development, Business Analytics or Product Management
-        </span>
-      </motion.p>
+        </span> */}
+      </motion.h1>
       <motion.div
         className="flex flex-col sm:flex-row items-center justify-center gap-3 px-4 text-lg font-medium"
         initial={{ opacity: 0, y: 100 }}
@@ -62,13 +63,13 @@ const Intro = () => {
         >
           Contact me here <BsArrowRight className="opacity-70 group-hover:translate-x-2 transition" />
         </Link>
-        <a className="group bg-white text-black px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor" href="/Abdul Ahad Khan-V7.pdf" download={true}>
+        <a className="group bg-white text-black/70 px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:text-black active:scale-105 transition cursor-pointer border border-black/10" href="/Abdul Ahad Khan-V7.pdf" download={true}>
           Download CV <HiDownload className="opacity-60 group-hover:translate-y-1 transition"/>
         </a>
-        <a className="bg-white text-gray-700 p-4 flex items-center gap-2 rounded-full">
+        <a className="bg-white text-gray-500 p-4 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-sky-600 active:scale-[1.15] transition cursor-pointer border border-black/10" href="https://www.linkedin.com/in/aak231/" target="_blank">
           <BsLinkedin />
         </a>
-        <a className="bg-white text-gray-700 p-4 flex items-center gap-2 rounded-full">
+        <a className="bg-white text-gray-500 p-4 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-violet-600 active:scale-[1.15] transition cursor-pointer border border-black/10" href="https://github.com/aak231/" target="_blank">
           <BsGithub />
         </a>
       </motion.div>
