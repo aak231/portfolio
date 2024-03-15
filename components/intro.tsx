@@ -63,7 +63,7 @@ const Intro = () => {
         >
           Contact me here <BsArrowRight className="opacity-70 group-hover:translate-x-2 transition" />
         </Link>
-        <a className="group bg-white text-black/70 px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:text-black active:scale-105 transition cursor-pointer border border-black/10" href="/Abdul Ahad Khan-V7.pdf" download={true}>
+        <a className="group bg-white text-black/70 px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:text-black active:scale-105 transition cursor-pointer border border-black/10" href="/CV.pdf" download={true}>
           Download CV <HiDownload className="opacity-60 group-hover:translate-y-1 transition"/>
         </a>
         <a className="bg-white text-gray-500 p-4 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-sky-600 active:scale-[1.15] transition cursor-pointer border border-black/10" href="https://www.linkedin.com/in/aak231/" target="_blank">
