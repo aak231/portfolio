@@ -6,6 +6,7 @@ import SpotiiLogo from "@/public/SpotiiLogo.png";
 import ArabUnityLogo from "@/public/ArabUnityLogo.png";
 import happyRoutesPic from "@/public/happyRoutes.png";
 import weatherWidgetPic from "@/public/weatherWidget.png";
+import YouPlatformLogo from "@/public/YouPlatformLogo.jpeg"
 
 export const sections = [
   {
@@ -75,6 +76,15 @@ export const experiencesData = [
     imageUrl: SpotiiLogo,
     date: "Sep 2022 - Mar 2023",
   },
+  {
+    title: "Full Stack SaaS Engineer",
+    location: "Melbourne, Australia (Remote)",
+    nameOfCompany: "youplatform.ai",
+    description:
+      "Working in an immersive internship with a SaaS AI start-up based in Australia, focused on creating an executive coaching and leadership platform.",
+    imageUrl: YouPlatformLogo,
+    date: "Aug 2023 - Present",
+  }
 ] as const;
 
 export const projectsData = [
@@ -122,10 +132,11 @@ export const skillsData = [
   "CSS",
   "JavaScript",
   "TypeScript",
-  "AWS Elastic Beanstalk",
-  "AWS EC2",
-  "AWS RDS",
+  "AWS",
+  "Microsoft Azure",
+  "Terraform",
   "React",
+  "Vue",
   "Next.js",
   "Node.js",
   "Git",
