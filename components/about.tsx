@@ -7,10 +7,11 @@ import { motion } from "framer-motion";
 const About = () => {
   return (
     <motion.section
-      className="mb-28 max-w-[52rem] text-center text-green-800 leading-8 sm:mb-40"
+      className="mb-28 max-w-[52rem] text-center text-green-800 leading-8 sm:mb-40 scroll-mt-28"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
+      id="about"
     >
       <SectionHeader>About Me</SectionHeader>
       <p className="mb-3 ">
