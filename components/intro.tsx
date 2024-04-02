@@ -3,25 +3,20 @@
 import Image from "next/image";
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 import Link from "next/link";
 import { BsArrowRight, BsGithub, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
-import { useActiveSectionContext } from "@/context/activeSectionContext";
+import { useSectionInView } from "@/lib/hooks";
 
 const Intro = () => {
-  const { ref, inView } = useInView({
-    threshold: 0.75,
-  });
-  const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
+  const { ref } = useSectionInView("Home", 0.6);
 
-  useEffect(() => {
-    if (inView && Date.now() - timeOfLastClick > 1000) {
-      setActiveSection("Home");
-    }
-  }, [inView, setActiveSection, timeOfLastClick]);
   return (
-    <section ref={ref} className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]" id="home">
+    <section
+      ref={ref}
+      className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
+      id="home"
+    >
       <div className="flex items-center justify-center">
         <div className="relative">
           <motion.div
@@ -73,15 +68,29 @@ const Intro = () => {
           href="#contact"
           className="group bg-green-800 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-green-950 active:scale-105 transition"
         >
-          Contact me here <BsArrowRight className="opacity-70 group-hover:translate-x-2 transition" />
+          Contact me here{" "}
+          <BsArrowRight className="opacity-70 group-hover:translate-x-2 transition" />
         </Link>
-        <a className="group bg-white text-black/70 px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:text-black active:scale-105 transition cursor-pointer border border-black/10" href="/CV.pdf" download={true}>
-          Download CV <HiDownload className="opacity-60 group-hover:translate-y-1 transition"/>
+        <a
+          className="group bg-white text-black/70 px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:text-black active:scale-105 transition cursor-pointer border border-black/10"
+          href="/CV.pdf"
+          download={true}
+        >
+          Download CV{" "}
+          <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
         </a>
-        <a className="bg-white text-gray-500 p-4 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-sky-600 active:scale-[1.15] transition cursor-pointer border border-black/10" href="https://www.linkedin.com/in/ahadtheengineer/" target="_blank">
+        <a
+          className="bg-white text-gray-500 p-4 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-sky-600 active:scale-[1.15] transition cursor-pointer border border-black/10"
+          href="https://www.linkedin.com/in/ahadtheengineer/"
+          target="_blank"
+        >
           <BsLinkedin />
         </a>
-        <a className="bg-white text-gray-500 p-4 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-violet-600 active:scale-[1.15] transition cursor-pointer border border-black/10" href="https://github.com/aak231/" target="_blank">
+        <a
+          className="bg-white text-gray-500 p-4 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] hover:scale-[1.15] hover:text-violet-600 active:scale-[1.15] transition cursor-pointer border border-black/10"
+          href="https://github.com/aak231/"
+          target="_blank"
+        >
           <BsGithub />
         </a>
       </motion.div>
